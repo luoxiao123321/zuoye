@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" id="inp"/>
+		<button id="but">提交</button>
+		
+		<script type="text/javascript">
+			var inp=document.getElementById('inp')
+			var but=document.getElementById('but')
+			
+			inp.oninput=function(){
+				if(inp.value.length<60){
+					but.onclick=function(){
+						alert('tijiaochenggong')
+					}
+				}else{
+						but.disabled=true
+					}
+			}
+		</script>
+	</body>
+</html>

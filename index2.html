@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.ng-cloak{
+		display: none;
+	}
+	</style>
+</head>
+<body class="ng-cloak">
+	<form ng-controller="ctrl" name="myForm">
+		<input type="text" ng-model="name" ng-minlength="0" ng-maxlength="60" required>
+		<input type="submit" ng-disabled="!myForm.$valid">
+	</form>
+	<script src="js/angular.min.js"></script>
+	<script>
+		var app=angular.module("app",[]);
+		app.controller("ctrl",function($scope){
+		})
+	</script>
+</body>
+</html>
